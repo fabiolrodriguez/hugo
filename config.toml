@@ -1,4 +1,4 @@
 baseURL = "https://fabio.monster/"
 languageCode = "en-us"
-title = "Brain Dump"
-theme = "kube"
+title = "DevOps Quântico"
+theme = "light-hugo"
