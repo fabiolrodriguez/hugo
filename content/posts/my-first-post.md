@@ -33,13 +33,13 @@ Nesta abordagem supomos que você vai comprar um domínio e hospedar o seu blog.
 
 Este seria o caso de publicar seus textos em alguma plataforma como Medium, dev.to ou até mesmo Facebook e afins.
 
-## Vantagens
+### Vantagens
 
 * Sem preocupações com infraestrutura;
 * Maior alcance;
 * Mais facilidade de apenas sentar e escrever.
 
-## Desvantagens
+### Desvantagens
 
 * Menos liberdade, as regras são do dono da plataforma;
 * Regras podem mudar a qualquer momento;
