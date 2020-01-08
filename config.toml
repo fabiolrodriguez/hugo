@@ -17,7 +17,7 @@ theme = "hugo-theme-chunky-poster"
     linkedin = "https://linkedin.com/fabiolrodriguez"
     github = "https://github.com/fabiolrodriguez"
     medium = "https://medium.com/@fabiolrodriguez"
-d    keybase = "https://keybase.io/monstrao"
+    keybase = "https://keybase.io/monstrao"
 
   [params.prismJS]
     enable = true
