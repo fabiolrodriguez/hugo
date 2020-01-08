@@ -2,3 +2,38 @@ baseURL = "https://fabio.monster/"
 languageCode = "en-us"
 title = "DevOps Quântico"
 theme = "hugo-theme-chunky-poster"
+
+[params]
+  author = "Hugo Authors"
+  description = "Lorem ipsum dolor sit amet."
+  homepageImage = "/images/homepage-image.jpg"
+  share = true
+  showLanguageSwitcher = false
+
+  [params.social]
+    rss = true
+    email = "fabio.rodriguez@gmail.com"
+    twitter = "https://twitter.com/fabiolrodriguez"
+    linkedin = "https://linkedin.com/fabiolrodriguez"
+    github = "https://github.com/fabiolrodriguez"
+    medium = "https://medium.com/@fabiolrodriguez"
+d    keybase = "https://keybase.io/monstrao"
+
+  [params.prismJS]
+    enable = true
+    theme = ""
+
+  [params.commento]
+    enable = true
+    url = "https://commento.io"
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[services]
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
