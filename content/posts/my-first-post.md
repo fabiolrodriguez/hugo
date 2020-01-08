@@ -1,7 +1,7 @@
 ---
 title: "Viva a informação descentralizada"
 date: 2020-01-06T17:23:18-03:00
-draft: true
+draft: false
 ---
 
 Acompanhei diversas pessoas que fizeram como resolução de ano novo "voltar a escrever no meu blog". Apesar de não ser nenhum das minhas resoluções, resolvi tentar também.
