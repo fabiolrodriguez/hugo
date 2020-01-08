@@ -4,9 +4,9 @@ title = "DevOps Quântico"
 theme = "hugo-theme-chunky-poster"
 
 [params]
-  author = "Hugo Authors"
-  description = "Lorem ipsum dolor sit amet."
-  homepageImage = "/images/homepage-image.jpg"
+  author = "Fabio de Lima Rodriguez"
+  description = "Coach de Linux e DevOps Quântico"
+  homepageImage = "/images/avatar.png"
   share = true
   showLanguageSwitcher = false
 
