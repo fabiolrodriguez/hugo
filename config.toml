@@ -22,7 +22,7 @@ theme = "hugo-theme-chunky-poster"
 
   [params.prismJS]
     enable = true
-    theme = ""
+    theme = "okaidia"
 
   [params.commento]
     enable = true

@@ -66,4 +66,3 @@ Se quiser seguir as bobagens que eu escrevo, tudo é sempre compartilhado no meu
 
 Até a próxima!
 
-{{ template "_internal/disqus.html" . }}
