@@ -6,7 +6,7 @@ theme = "hugo-theme-chunky-poster"
 [params]
   author = "Fabio de Lima Rodriguez"
   description = "Coach de Linux e DevOps Quântico"
-  homepageImage = "/images/avatar.png"
+  homepageImage = "/images/yaml.jpeg"
   share = true
   showLanguageSwitcher = false
 
