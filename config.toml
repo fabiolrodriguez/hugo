@@ -9,6 +9,7 @@ theme = "hugo-theme-chunky-poster"
   homepageImage = "/images/yaml.jpeg"
   share = true
   showLanguageSwitcher = false
+  disqusShortname = "fabiolrodriguez"
 
   [params.social]
     rss = true

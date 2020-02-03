@@ -18,7 +18,7 @@ Irei elencar alguns destes pontos.
 
 ## Auto publicação em um blog
 
-Nesta abordagem supomos que você vai comprar um domínio e hospedar o seu blog. Também existem alternativas gratuitas mais simples, como o [blogger](https://www.blogger.com/), [wordpress.com]/(https://wordpress.com) e etc, mas não deixam de ser uma plataforma terceira, caindo nos mesmos problemas.
+Nesta abordagem supomos que você vai comprar um domínio e hospedar o seu blog. Também existem alternativas gratuitas mais simples, como o [blogger](https://www.blogger.com/), [wordpress.com](https://wordpress.com) e etc, mas não deixam de ser uma plataforma terceira, caindo nos mesmos problemas.
 
 ### Vantagens
 
