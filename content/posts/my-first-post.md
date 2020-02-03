@@ -6,9 +6,11 @@ draft: false
 
 ![https/://fabio.monster](https://fabio.monster/images/decentralized.png#center)
 
-Acompanhei diversas pessoas que fizeram como resolução de ano novo "voltar a escrever no meu blog". Apesar de não ser nenhum das minhas resoluções, resolvi tentar também.
+Acompanhei diversas pessoas que fizeram como resolução de ano novo "voltar a escrever no meu blog", um movimento bem bacana na comunidade de software livre em geral.
 
-Não que eu tenha ficado completamente sem escrever. Durante o ano passado publiquei alguns artigos no meu Medium, que até considero uma plataforma bacana, bem focada em escrita (apesar dos posts pagos serem um saco). Também tem bastante gente utilizando o dev.to para publicar seus textos.
+Sinto falta de escrever com regularidade, então resolvi subir este simples site usando o Hugo para registrar algumas ideias e, quem sabe, ajudar alguém buscando por informações do assunto.
+
+Não que eu tenha ficado completamente sem escrever. Durante o ano passado publiquei alguns artigos no meu !https://medium.com/@fabio.rodriguez[]Medium, que até considero uma plataforma bacana, bem focada em escrita (apesar dos posts pagos serem um saco). Também tem bastante gente utilizando o ![https://dev.to/]dev.to para publicar seus textos.
 
 Porém algums pessoas costumam bater na tecla de publicar um blog próprio é mais interessante e, fazendo uma reflexão, existem alguns pontos que realmente fazem sentido nesta analogia.
 
