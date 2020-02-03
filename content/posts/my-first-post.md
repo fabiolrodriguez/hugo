@@ -10,7 +10,7 @@ Acompanhei diversas pessoas que fizeram como resolução de ano novo "voltar a e
 
 Sinto falta de escrever com regularidade, então resolvi subir este simples site usando o Hugo para registrar algumas ideias e, quem sabe, ajudar alguém buscando por informações do assunto.
 
-Não que eu tenha ficado completamente sem escrever. Durante o ano passado publiquei alguns artigos no meu ![https://medium.com/@fabio.rodriguez](Medium), que até considero uma plataforma bacana, bem focada em escrita (apesar dos posts pagos serem um saco). Também tem bastante gente utilizando o ![https://dev.to/](dev.to) para publicar seus textos.
+Não que eu tenha ficado completamente sem escrever. Durante o ano passado publiquei alguns artigos no meu {{< https://medium.com/@fabio.rodriguez >}} Medium, que até considero uma plataforma bacana, bem focada em escrita (apesar dos posts pagos serem um saco). Também tem bastante gente utilizando o {{< https://dev.to/ >}} dev.to para publicar seus textos.
 
 Porém algums pessoas costumam bater na tecla de publicar um blog próprio é mais interessante e, fazendo uma reflexão, existem alguns pontos que realmente fazem sentido nesta analogia.
 
