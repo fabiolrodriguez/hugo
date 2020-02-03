@@ -4,6 +4,8 @@ date: 2020-01-06T17:23:18-03:00
 draft: false
 ---
 
+![images/decentralized.png]
+
 Acompanhei diversas pessoas que fizeram como resolução de ano novo "voltar a escrever no meu blog". Apesar de não ser nenhum das minhas resoluções, resolvi tentar também.
 
 Não que eu tenha ficado completamente sem escrever. Durante o ano passado publiquei alguns artigos no meu Medium, que até considero uma plataforma bacana, bem focada em escrita (apesar dos posts pagos serem um saco). Também tem bastante gente utilizando o dev.to para publicar seus textos.
