@@ -65,3 +65,5 @@ Qual é a melhor alternativa para você? Eu sinceramente, vou em um modelo híbr
 Se quiser seguir as bobagens que eu escrevo, tudo é sempre compartilhado no meu [twitter](https://twitter.com/fabiolrodriguez), mas todas minhas redes sociais estão no rodapé.
 
 Até a próxima!
+
+{{ template "_internal/disqus.html" . }}
