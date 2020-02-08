@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "DevOps Quântico"
 theme = "hugo-theme-chunky-poster"
 
+[imaging]
+  resampleFilter = "box"
+  anchor = "center"
+
 [params]
   author = "Fabio de Lima Rodriguez"
   description = "Coach de Linux e DevOps Quântico"
@@ -39,6 +43,3 @@ theme = "hugo-theme-chunky-poster"
   [services.twitter]
     disableInlineCSS = true
 
-[imaging]
-  resampleFilter = "box"
-  anchor = "center"
