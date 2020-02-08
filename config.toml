@@ -38,3 +38,7 @@ theme = "hugo-theme-chunky-poster"
 
   [services.twitter]
     disableInlineCSS = true
+
+[imaging]
+  resampleFilter = "box"
+  anchor = "center"
