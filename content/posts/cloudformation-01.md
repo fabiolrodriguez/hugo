@@ -94,3 +94,9 @@ https://aws.amazon.com/amazon-linux-2/
 Run "sudo yum update" to apply all updates.
 [ec2-user@ip-172-31-34-133 ~]$
 ```
+
+Para apagar a stack:
+
+```bash
+aws cloudformation delete-stack --stack-name ec2test
+```
