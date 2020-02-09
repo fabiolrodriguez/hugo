@@ -40,6 +40,8 @@ Default output format [None]:
  ```
 Obviamente eu ocultei minhas chaves de acesso, não quer ninguém minerando bitcoin na minha conta.
 
+## Primeiro template
+
 Feito isto, vamos entender o básico de um template do Cloudformation. É possível criar nossos arquivos usando yaml ou json, irei ilustrar em yaml para um entendimento mais fácil.
 
 ```yaml
@@ -50,7 +52,7 @@ Resources:
       InstanceType: "t2.micro"
       SecurityGroups: [!Ref 'InstanceSecurityGroup']
       ImageId: "ami-062f7200baf2fa504"
-      KeyName: "testeec2"
+      KeyName: "teste"
       BlockDeviceMappings: 
       - DeviceName: "/dev/sdm"
         Ebs: 
@@ -67,8 +69,15 @@ Resources:
         ToPort: 22
         CidrIp: "0.0.0.0/0"
 ```
+Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um security group para a mesma. Estamos liberando o acesso SSH para a internet neste exemplo, o que não é nem de longe recomendado.
 
-Para rodar o template:
+Lembre-se de destruir a instância ao final dos testes, como demonstrado no final do artigo.
+
+## Utilizando a awscli para gerenciar o Cloudformation
+
+Existem duas maneiras de executar um template do cloudformation na AWS, via cli ou via console (também podemos utilizar webhooks integrados ao git, mas fica para outro artigo). 
+
+Neste caso, vamos utilizar a awscli para fazer o deploy do nosso template.
 
 ```bash
 aws cloudformation deploy --stack-name ec2test --template-file ec2.yaml
@@ -77,12 +86,24 @@ Waiting for changeset to be created..
 Waiting for stack create/update to complete
 Successfully created/updated stack - ec2test
 ```
-Agora basta verificar no seu console se a instância EC2 foi criada.
+
+É possível acompanhar a criação da stack pelo console da AWS também, mesmo quando criamos via cli.
+
+Agora basta verificar no seu console sua instância criada. 
+
+Copie o IP público da sua instância para realizar o teste de conexão.
+
+Lembra da Keypair que criamos via console? vamos utilizá-la para conectar na instância via ssh.
+
+```bash
+cp ~/Downloads/teste.pem ~/.ssh/teste.pem
+chmod 400 ~/.ssh/teste.pem
+```
 
 Conectar via SSH:
 
 ```bash
-ssh ec2-user@18.212.135.252 -i ~/.ssh/testeec2.pem
+ssh ec2-user@18.212.135.252 -i ~/.ssh/teste.pem
 
 
        __|  __|_  )
