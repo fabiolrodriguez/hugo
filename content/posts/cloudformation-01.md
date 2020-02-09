@@ -43,5 +43,54 @@ Obviamente eu ocultei minhas chaves de acesso, não quer ninguém minerando bitc
 Feito isto, vamos entender o básico de um template do Cloudformation. É possível criar nossos arquivos usando yaml ou json, irei ilustrar em yaml para um entendimento mais fácil.
 
 ```yaml
+Resources:
+  EC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: "t2.micro"
+      SecurityGroups: [!Ref 'InstanceSecurityGroup']
+      ImageId: "ami-062f7200baf2fa504"
+      KeyName: "testeec2"
+      BlockDeviceMappings: 
+      - DeviceName: "/dev/sdm"
+        Ebs: 
+          VolumeType: "gp2"
+          DeleteOnTermination: "true"
+          VolumeSize: "8"
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: "0.0.0.0/0"
+```
 
+Para rodar o template:
+
+```bash
+aws cloudformation deploy --stack-name ec2test --template-file ec2.yaml
+
+Waiting for changeset to be created..
+Waiting for stack create/update to complete
+Successfully created/updated stack - ec2test
+```
+Agora basta verificar no seu console se a instância EC2 foi criada.
+
+Conectar via SSH:
+
+```bash
+ssh ec2-user@18.212.135.252 -i ~/.ssh/testeec2.pem
+
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+7 package(s) needed for security, out of 39 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-34-133 ~]$
 ```
