@@ -121,3 +121,9 @@ Para apagar a stack:
 ```bash
 aws cloudformation delete-stack --stack-name ec2test
 ```
+
+Agora você não tem mais recursos criados na AWS, e não irá receber nenhuma conta surpresa no seu cartão de crédito.
+
+Um grande benefício da IaaC para quem está estudando é exatamente isso, pode destruir todos os recursos após os testes e evitar cobranças indesejadas.
+
+Nos próximos arquivos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nosso template mais elegante.
