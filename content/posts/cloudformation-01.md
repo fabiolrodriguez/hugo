@@ -149,9 +149,21 @@ Successfully created/updated stack - ec2test
 
 É possível acompanhar a criação da stack pelo console da AWS também, mesmo quando criamos via cli.
 
-Agora basta verificar no seu console sua instância criada, em *Services -> EC2*. 
+![https/://fabio.monster](https://fabio.monster/images/cloudformation.png)
 
-Copie o IP público da sua instância para realizar o teste de conexão.
+Para verificar sua instância:
+
+```bash
+aws ec2 describe-instances
+```
+
+Este comando irá retornar um json com todos os dados da sua instância EC2.
+
+Vamos pegar agora o IP público apenas:
+
+```bash
+aws ec2 describe-instances | grep PublicIp
+```
 
 Lembra da Keypair que criamos via console? vamos utilizá-la para conectar na instância via ssh.
 
