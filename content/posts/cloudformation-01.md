@@ -66,6 +66,8 @@ Clique em *Next* para definir uma TAG, depois *Next* novamente na tela de *Revie
 
 ![https/://fabio.monster](https://fabio.monster/images/user.png)
 
+A tela seguinte irá exibir a sua *Access Key* e o seu *Access Key ID*, recomendo fortemente **salvar estes dados**, pois não é possível rever a chave de acesso de um usuário já criado.
+
 Agora chega de usar o console, todo o resto faremos pela *AWS CLI*!
 
 ### AWS CLI
