@@ -92,7 +92,7 @@ Obviamente eu ocultei minhas chaves de acesso, não quer ninguém minerando bitc
 
 ## Primeiro template
 
-Feito isto, vamos entender o básico de um template do Cloudformation. É possível criar nossos arquivos usando yaml ou json, irei ilustrar em yaml para um entendimento mais fácil.
+Feito isto, vamos entender o básico de um template do Cloudformation. É possível criar nossos arquivos usando *yaml* ou *json*, irei ilustrar em yaml para um entendimento mais fácil.
 
 ```yaml
 Resources:
@@ -121,7 +121,14 @@ Resources:
 ```
 Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um security group para a mesma. Estamos liberando o acesso SSH para toda a internet neste exemplo, o que não é nem de longe recomendado.
 
-Lembre-se de destruir a instância ao final dos testes, como demonstrado no final do artigo.
+A configuração da nossa instância ficou a seguinte:
+
+* O tipo da instância é t2.micro
+* imagem base: ami-062f7200baf2fa504
+* Um volume EBS do tipo gp2 com 8 GB de tamanho.
+* Utilizando a keypair chamada 'teste'.
+
+Estes recursos serão criados dentro da nossa *VPC* default.
 
 ## Utilizando a awscli para gerenciar o Cloudformation
 
@@ -176,6 +183,6 @@ Agora você não tem mais recursos criados na AWS, e não irá receber nenhuma c
 
 Um grande benefício da IaaC para quem está estudando é exatamente isso, pode destruir todos os recursos após os testes e evitar cobranças indesejadas.
 
-Lembrando que este foi um exemplo extremamente básico. Nos próximos artigos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nosso template mais elegante.
+Lembrando que este foi um exemplo extremamente básico. Nos próximos artigos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nossos templates mais elegantes.
 
 Lembrando que todos os templates citados aqui também estão disponíveis no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground). Aproveita e também me segue no [Twitter](https://twitter.com/fabiolrodriguez) para saber quando eu publicar novos artigos.
