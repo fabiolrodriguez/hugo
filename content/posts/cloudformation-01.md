@@ -28,7 +28,7 @@ Se sua stack é full AWS, porque não dar uma chance ao Cloudfomartion também?
 
 Para simplificar o tutorial, vamos criar apenas um único recurso via console, que será a chave de acesso ssh. Também criaremos um usuário para acesso cli.
 
-Acessando *Services -> EC2*, no menu lateral, clique em Keypairs:
+Acessando *Services -> EC2*, no menu lateral, clique em Key pairs:
 
 ![https/://fabio.monster](https://fabio.monster/images/keypairs.png)
 
