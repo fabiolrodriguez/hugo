@@ -155,6 +155,8 @@ Copie o IP público da sua instância para realizar o teste de conexão.
 
 Lembra da Keypair que criamos via console? vamos utilizá-la para conectar na instância via ssh.
 
+Copiar e ajustar as permissões da chave:
+
 ```bash
 cp ~/Downloads/teste.pem ~/.ssh/teste.pem
 chmod 400 ~/.ssh/teste.pem
@@ -184,8 +186,8 @@ aws cloudformation delete-stack --stack-name ec2test
 
 Agora você não tem mais recursos criados na AWS, e não irá receber nenhuma conta surpresa no seu cartão de crédito.
 
-Um grande benefício da IaaC para quem está estudando é exatamente isso, pode destruir todos os recursos após os testes e evitar cobranças indesejadas.
+Um grande benefício da IaaC para quem está estudando é exatamente isso, poder destruir todos os recursos após os testes e evitar cobranças indesejadas.
 
 Lembrando que este foi um exemplo extremamente básico. Nos próximos artigos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nossos templates mais elegantes.
 
-Lembrando que todos os templates citados aqui também estão disponíveis no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground). Aproveita e também me segue no [Twitter](https://twitter.com/fabiolrodriguez) para saber quando eu publicar novos artigos.
+Todos os templates citados aqui também estão disponíveis no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground). Aproveita e também me segue no [Twitter](https://twitter.com/fabiolrodriguez) para saber quando eu publicar novos artigos.
