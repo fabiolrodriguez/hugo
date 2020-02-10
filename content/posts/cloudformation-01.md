@@ -126,6 +126,6 @@ Agora você não tem mais recursos criados na AWS, e não irá receber nenhuma c
 
 Um grande benefício da IaaC para quem está estudando é exatamente isso, pode destruir todos os recursos após os testes e evitar cobranças indesejadas.
 
-Nos próximos arquivos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nosso template mais elegante.
+Lembrando que este foi um exemplo extremamente básico. Nos próximos artigos, iremos explorar um pouco mais os recursos do Cloudformation e deixar nosso template mais elegante.
 
-Lembrando que todos os templates citados aqui também estão disponíveis no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
+Lembrando que todos os templates citados aqui também estão disponíveis no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground). Aproveita e também me segue no [Twitter](https://twitter.com/fabiolrodriguez) para saber quando eu publicar novos artigos.
