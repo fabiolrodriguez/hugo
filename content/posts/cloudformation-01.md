@@ -119,7 +119,6 @@ Resources:
         ToPort: 22
         CidrIp: "0.0.0.0/0"
 ```
-Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um security group para a mesma. Estamos liberando o acesso SSH para toda a internet neste exemplo, o que não é nem de longe recomendado.
 
 A configuração da nossa instância ficou a seguinte:
 
@@ -128,7 +127,11 @@ A configuração da nossa instância ficou a seguinte:
 * Um volume EBS do tipo gp2 com 8 GB de tamanho.
 * Utilizando a keypair chamada 'teste'.
 
+Também vamos criar um *Security Group*, liberando a as conexões de entrada na porta 22.
+
 Estes recursos serão criados dentro da nossa *VPC* default.
+
+Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um *Security Group* para a mesma. Estamos liberando o acesso SSH para toda a internet neste exemplo, o que não é nem de longe recomendado (como é um ambiente de teste e será destruído em seguida, deixaremos assim por enquanto).
 
 ## Utilizando a awscli para gerenciar o Cloudformation
 
