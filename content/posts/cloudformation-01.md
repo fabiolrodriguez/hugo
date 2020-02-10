@@ -32,11 +32,11 @@ Acessando Services -> EC2, no menu lateral, clique em Keypairs:
 
 Clique em create para criar a nova chave:
 
-![https/://fabio.monster](https://fabio.monster/images/keypair-create.png)
+![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
 Preencha o nome como 'teste', selecione o formato 'pem' e clique me 'Create key pair'. 
 
-![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
+![https/://fabio.monster](https://fabio.monster/images/keypair-done.png)
 
 Agora chega de usar o console, todo o resto faremos pela AWS CLI!
 
