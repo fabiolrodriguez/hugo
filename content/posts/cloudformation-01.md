@@ -22,6 +22,8 @@ Se sua stack é full AWS, porque não dar uma chance ao Cloudfomartion também?
 
 ## Instalação e configuração
 
+### AWS Console
+
 Para simplificar o tutorial, vamos criar apenas um único recurso via console, que será a chave de acesso ssh.
 
 Acessando Services -> EC2, no menu lateral, clique em Keypairs:
@@ -36,6 +38,9 @@ Preencha o nome como 'teste', selecione o formato 'pem' e clique me 'Create key 
 
 ![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
+Agora chega de usar o console, todo o resto faremos pela AWS CLI!
+
+### AWS CLI
 
 O primeiro passo é instalarmos a AWS CLI. Neste exemplo vamos demonstrar como instalar em um ambiente Linux (Ubuntu), mas caso você utilize Windows, basta instalar o WSL(e o Ubuntu pela Microsoft Store) e depois seguir o tutorial por ele.
 
