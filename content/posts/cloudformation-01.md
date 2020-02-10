@@ -24,6 +24,8 @@ Se sua stack é full AWS, porque não dar uma chance ao Cloudfomartion também?
 
 ### AWS Console
 
+#### Criar uma Keypair
+
 Para simplificar o tutorial, vamos criar apenas um único recurso via console, que será a chave de acesso ssh.
 
 Acessando *Services -> EC2*, no menu lateral, clique em Keypairs:
@@ -34,9 +36,35 @@ Clique em *Create key pair* para criar a nova chave:
 
 ![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
-Preencha o nome como 'teste', selecione o formato 'pem' e clique me *Create key pair*.
+Preencha o nome como *teste*, selecione o formato *pem* e clique me *Create key pair*.
 
 ![https/://fabio.monster](https://fabio.monster/images/keypair-done.png)
+
+#### Criar um usuário.
+
+Acesse *Services -> IAM*.
+
+No meu lateral, na parte de *Access Management* clique em *Users*.
+
+![https/://fabio.monster](https://fabio.monster/images/iam.png)
+
+Depois clique em *Add User*
+
+![https/://fabio.monster](https://fabio.monster/images/add-user.png)
+
+Defina um nome para a conta e o tipo como *Programmatic access*.
+
+![https/://fabio.monster](https://fabio.monster/images/programmatic.png)
+
+Clique *Next* para definir as permissões.
+
+Selecione a aba *Attach existing policies directly* e marque a caixa de seleção *Administrator Access*.
+
+![https/://fabio.monster](https://fabio.monster/images/admacc.png)
+
+Clique em *Next* para definir uma TAG, depois *Next* novamente na tela de *Review*.
+
+![https/://fabio.monster](https://fabio.monster/images/user.png)
 
 Agora chega de usar o console, todo o resto faremos pela *AWS CLI*!
 
@@ -48,7 +76,7 @@ O primeiro passo é instalarmos a AWS CLI. Neste exemplo vamos demonstrar como i
 sudo apt install awscli
  ```
 
- Depois precisamos configurar a awscli. Neste ponto você precisa ter uma Access Key e um Access Key ID. Basta criar um usuário no IAM como Programmatic access, que ao final da tela de criação serão exibidos estes dados (salve-os com carinho, pois não será possível resgatar a chave de acesso novamente para este usuário).
+ Depois precisamos configurar a awscli. Neste ponto você precisa ter a Access Key e o Access Key ID do usuários que criamos anteriormente.
 
  ```bash
 aws configure
@@ -89,7 +117,7 @@ Resources:
         ToPort: 22
         CidrIp: "0.0.0.0/0"
 ```
-Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um security group para a mesma. Estamos liberando o acesso SSH para a internet neste exemplo, o que não é nem de longe recomendado.
+Sempre é necessário pelo menos um resource para o template. Neste caso, temos 2, uma instância EC2 e um security group para a mesma. Estamos liberando o acesso SSH para toda a internet neste exemplo, o que não é nem de longe recomendado.
 
 Lembre-se de destruir a instância ao final dos testes, como demonstrado no final do artigo.
 
@@ -109,9 +137,7 @@ Successfully created/updated stack - ec2test
 
 É possível acompanhar a criação da stack pelo console da AWS também, mesmo quando criamos via cli.
 
-Agora basta verificar no seu console sua instância criada. 
-
-![https/://fabio.monster](https://fabio.monster/images/ec2.png)
+Agora basta verificar no seu console sua instância criada, em *Services -> EC2*. 
 
 Copie o IP público da sua instância para realizar o teste de conexão.
 
