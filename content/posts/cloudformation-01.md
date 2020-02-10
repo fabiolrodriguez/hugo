@@ -40,7 +40,7 @@ Preencha o nome como *teste*, selecione o formato *pem* e clique me *Create key 
 
 ![https/://fabio.monster](https://fabio.monster/images/keypair-done.png)
 
-#### Criar um usuário.
+#### Criar um usuário
 
 Acesse *Services -> IAM*.
 
