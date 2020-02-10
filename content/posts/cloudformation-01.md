@@ -12,7 +12,7 @@ Atualmente estou trabalhando em um projeto inteiramente gerido via Cloudformatio
 
 ## Porque Cloudformatiom?
 
-Sabemos que a ferramenta de IaaC mais popular do mercado é o Terraform da Hashicorp, e com louvor. 
+Sabemos que a ferramenta de IaaC mais popular do mercado é o Terraform da [Hashicorp](https://www.hashicorp.com/), e com louvor. 
 
 O Terraform geralmente é mais vantajoso pois podemos escrever a infra como código para diversas clouds diferentes (e até para o VMWare), enquanto o Cloudformation é exclusivo para a AWS, obviamente.
 
