@@ -26,15 +26,15 @@ Se sua stack é full AWS, porque não dar uma chance ao Cloudfomartion também?
 
 Para simplificar o tutorial, vamos criar apenas um único recurso via console, que será a chave de acesso ssh.
 
-Acessando Services -> EC2, no menu lateral, clique em Keypairs:
+Acessando //Services -> EC2//, no menu lateral, clique em Keypairs:
 
 ![https/://fabio.monster](https://fabio.monster/images/keypairs.png)
 
-Clique em create para criar a nova chave:
+Clique em //Create key pair// para criar a nova chave:
 
 ![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
-Preencha o nome como 'teste', selecione o formato 'pem' e clique me 'Create key pair'. 
+Preencha o nome como 'teste', selecione o formato 'pem' e clique me //Create key pair//. 
 
 ![https/://fabio.monster](https://fabio.monster/images/keypair-done.png)
 
