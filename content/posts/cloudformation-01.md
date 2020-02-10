@@ -78,7 +78,7 @@ O primeiro passo é instalarmos a AWS CLI. Neste exemplo vamos demonstrar como i
 sudo apt install awscli
  ```
 
- Depois precisamos configurar a awscli. Neste ponto você precisa ter a Access Key e o Access Key ID do usuários que criamos anteriormente.
+ Depois precisamos configurar a awscli. Neste ponto você precisa ter a Access Key e o Access Key ID do usuário que criamos anteriormente.
 
  ```bash
 aws configure
