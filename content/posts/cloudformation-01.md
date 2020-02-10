@@ -26,15 +26,15 @@ Para simplificar o tutorial, vamos criar apenas um único recurso via console, q
 
 Acessando Services -> EC2, no menu lateral, clique em Keypairs:
 
-![https/://fabio.monster](https://fabio.monster/images/keipairs.png)
+![https/://fabio.monster](https://fabio.monster/images/keypairs.png)
 
-Define um nome para a chave, neste caso utilizamos 'teste', depois clique em create para criar a nova chave:
+Clique em create para criar a nova chave:
 
-![https/://fabio.monster](https://fabio.monster/images/keipair-create.png)
+![https/://fabio.monster](https://fabio.monster/images/keypair-create.png)
 
-Verifique sua chave criada:
+Preencha o nome como 'teste', selecione o formato 'pem' e clique me 'Create key pair'. 
 
-![https/://fabio.monster](https://fabio.monster/images/created-keipair.png)
+![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
 
 O primeiro passo é instalarmos a AWS CLI. Neste exemplo vamos demonstrar como instalar em um ambiente Linux (Ubuntu), mas caso você utilize Windows, basta instalar o WSL(e o Ubuntu pela Microsoft Store) e depois seguir o tutorial por ele.
