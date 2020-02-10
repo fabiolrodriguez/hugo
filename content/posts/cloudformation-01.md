@@ -26,19 +26,19 @@ Se sua stack é full AWS, porque não dar uma chance ao Cloudfomartion também?
 
 Para simplificar o tutorial, vamos criar apenas um único recurso via console, que será a chave de acesso ssh.
 
-Acessando //Services -> EC2//, no menu lateral, clique em Keypairs:
+Acessando *Services -> EC2*, no menu lateral, clique em Keypairs:
 
 ![https/://fabio.monster](https://fabio.monster/images/keypairs.png)
 
-Clique em //Create key pair// para criar a nova chave:
+Clique em *Create key pair* para criar a nova chave:
 
 ![https/://fabio.monster](https://fabio.monster/images/created-keypair.png)
 
-Preencha o nome como 'teste', selecione o formato 'pem' e clique me //Create key pair//. 
+Preencha o nome como 'teste', selecione o formato 'pem' e clique me *Create key pair*.
 
 ![https/://fabio.monster](https://fabio.monster/images/keypair-done.png)
 
-Agora chega de usar o console, todo o resto faremos pela AWS CLI!
+Agora chega de usar o console, todo o resto faremos pela *AWS CLI*!
 
 ### AWS CLI
 
@@ -110,6 +110,8 @@ Successfully created/updated stack - ec2test
 É possível acompanhar a criação da stack pelo console da AWS também, mesmo quando criamos via cli.
 
 Agora basta verificar no seu console sua instância criada. 
+
+![https/://fabio.monster](https://fabio.monster/images/ec2.png)
 
 Copie o IP público da sua instância para realizar o teste de conexão.
 
