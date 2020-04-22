@@ -58,3 +58,10 @@ Resources:
         ToPort: 22
         CidrIp: "0.0.0.0/0"
 ```
+## Criando os recursos
+
+Agora basta rodar o nosso template via awscli:
+
+```bash
+aws cloudformation deploy --stack-name vpctest --template-file vpc.yaml
+```
