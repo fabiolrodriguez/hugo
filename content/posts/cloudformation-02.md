@@ -138,6 +138,10 @@ IGAcc:
 
 ```
 
+## Outputs
+
+Para podermos referenciar a VPC nos próximos templates do Cloudformation, precisamos registrar os IDs da VPC e das subnets.
+
 ## Rodando a stack
 
 Agora basta rodar o nosso template via awscli:
@@ -145,6 +149,11 @@ Agora basta rodar o nosso template via awscli:
 ```bash
 aws cloudformation deploy --stack-name vpctest --template-file vpc.yaml
 ```
+## Conclusão
+
+Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos pŕoximos artigos iremos criar os recursos em cima desta VPC.
+
+Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
 
 ## Referências
 
