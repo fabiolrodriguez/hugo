@@ -2,7 +2,7 @@ baseURL = "https://fabio.monster/"
 languageCode = "en-us"
 title = "DevOps Quântico"
 theme = "hugo-theme-chunky-poster"
-buildDrafts = true
+buildDrafts = false
 
 [imaging]
   resampleFilter = "box"
