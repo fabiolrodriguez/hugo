@@ -72,7 +72,7 @@ Vamos criar as subnets pública e privada, com as respectivas faixas de IP 10.10
 Pubsubnet:
   Type: AWS::EC2::Subnet
   Properties:
-    AvailabilityZone: us-east-1
+    AvailabilityZone: us-east-1a
     VpcId: !Ref myVPC
     CidrBlock: 10.10.1.0/24
     Tags:
@@ -82,7 +82,7 @@ Pubsubnet:
 Privsubnet:
   Type: AWS::EC2::Subnet
   Properties:
-    AvailabilityZone: us-east-1
+    AvailabilityZone: us-east-1a
     VpcId: !Ref myVPC
     CidrBlock: 10.10.2.0/24
     Tags:
@@ -162,7 +162,11 @@ Outputs:
 Agora basta rodar o nosso template via awscli:
 
 ```bash
-aws cloudformation deploy --stack-name vpctest --template-file vpc.yaml
+➜  vpc (master) ✗ aws cloudformation deploy --stack-name vpctest --template-file vpc.yaml
+
+Waiting for changeset to be created..
+Waiting for stack create/update to complete
+Successfully created/updated stack - vpctest
 ```
 
 ## Conclusão
