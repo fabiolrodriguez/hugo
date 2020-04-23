@@ -142,6 +142,21 @@ IGAcc:
 
 Para podermos referenciar a VPC nos próximos templates do Cloudformation, precisamos registrar os IDs da VPC e das subnets.
 
+```yaml
+Outputs:
+  VpcId:
+      Description: ID of created VPC
+      Value: !Ref myVPC
+  
+  PubsubnetId:
+      Description: ID of public subnet
+      Value: !Ref Pubsubnet
+  
+  PrivsubnetId:
+      Description: ID of private subnet
+      Value: !Ref Privsubnet
+```
+
 ## Rodando a stack
 
 Agora basta rodar o nosso template via awscli:
@@ -149,6 +164,7 @@ Agora basta rodar o nosso template via awscli:
 ```bash
 aws cloudformation deploy --stack-name vpctest --template-file vpc.yaml
 ```
+
 ## Conclusão
 
 Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos pŕoximos artigos iremos criar os recursos em cima desta VPC.
