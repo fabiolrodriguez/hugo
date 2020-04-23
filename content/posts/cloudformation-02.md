@@ -90,7 +90,11 @@ Privsubnet:
         Value: Privsubnet
 
 ```
-Note como referênciamos nossa VPC como ```yaml !Ref myVPC ```.
+Note como referênciamos nossa VPC como:
+
+ ```yaml 
+ !Ref myVPC 
+ ```
 
 ## Criando o Internet Gateway
 
