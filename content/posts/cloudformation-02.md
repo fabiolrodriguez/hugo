@@ -1,12 +1,12 @@
 ---
 title: "Cloudformation 02 - VPC e Referências"
 date: 2020-04-22T11:06:38-03:00
-draft: true
+draft: false
 ---
 
 ## Evoluindo no Cloudformation
 
-No primeiro artigo desta série, aprendemos como funciona o Cloudformation, configuramos o ambiente ecriamos nosso primeiro template.
+No primeiro artigo desta série, aprendemos como funciona o Cloudformation, configuramos o ambiente e criamos nosso primeiro template.
 
 Naquele exemplo, utilizamos a VPC padrão da AWS, o que não é algo recomendável. O melhor cenário é sempre criarmos a nossa própria VPC, com a faixa de rede que desejamos. Isto é importante para, por exemplo, utilizar uma faixa de rede diferente do seu datacenter atual e poder fechar uma VPN.
 
@@ -41,7 +41,7 @@ Resources:
         - Key: Name
           Value: MyVPC
 ```
-Podemos abservar que a faixa de rede utilizada é a 10.10.0.0/16. Neste caso a escolha foi aleatória, mas o correto é verificar a sua necessidade para evitar problemas futuros.
+Podemos observar que a faixa de rede utilizada é a 10.10.0.0/16. Neste caso a escolha foi aleatória, mas o correto é verificar a sua necessidade para evitar problemas futuros.
 
 Nos próximos passos, iremos utilizar bastante as referências, portanto precisamos entender esse ponto.
 
@@ -57,7 +57,7 @@ Também é possível acessar recursos criados por outras stacks do Cloudformatio
 Para referênciar um output, precisamos utilizar a tag:
 
 ```yaml
-!GetAtt Recurso
+!GetAtt Recurso.atributo
 ```
 Utilizaríamos esta opção, por exemplo, para criar recursos futuros dentro desta mesma VPC.
 
@@ -169,12 +169,24 @@ Waiting for stack create/update to complete
 Successfully created/updated stack - vpctest
 ```
 
+Podemos verificar os outputs que salvamos pelo console:
+
+![https/://fabio.monster](https://fabio.monster/images/outputs.png)
+
+Lembrando que depois dos estudos podemos deletar a stack para não gerar custos.
+
+```bash
+➜  vpc (master) ✗ aws cloudformation delete-stack --stack-name vpctest
+```
+
 ## Conclusão
 
-Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos pŕoximos artigos iremos criar os recursos em cima desta VPC.
+Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos próximos artigos iremos criar recursos dentro desta VPC.
 
 Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
 
 ## Referências
 
-https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/how-it-works.html
+[https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/how-it-works.html]
+
+[https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html]
