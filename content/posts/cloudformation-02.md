@@ -189,8 +189,11 @@ Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos próximos
 
 Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
 
+Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
+
 ## Referências
 
-[https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/how-it-works.html]
+[https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/how-it-works.html](https://docs.aws.amazon.com/pt_br/vpc/latest/userguide/how-it-works.html)
 
-[https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html]
+[https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html](https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+
