@@ -8,6 +8,8 @@ draft: true
 
 Em nosso [artigo passado](https://fabio.monster/posts/cloudformation-02/) criamos nossa VPC completa, portanto antes de iniciar a criação dos recursos citados aqui, precisamos rodar aquela stack para criar toda a estrutura da VPC.
 
+Você pode encontrar o template cloudformation completo no meu [github](https://github.com/fabiolrodriguez/cloudformation-playground/tree/master/vpc).
+
 ## Criando a EC2
 
 Para criar nossa EC2, não tem segredo:
@@ -38,11 +40,15 @@ Resources:
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable SSH access via port 22
+      GroupDescription: Enable SSH access via port 22 and 80
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 22
         ToPort: 22
+        CidrIp: "0.0.0.0/0"
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
         CidrIp: "0.0.0.0/0"
 ```
 
