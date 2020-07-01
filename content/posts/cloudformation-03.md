@@ -1,6 +1,6 @@
 ---
 title: "Cloudformation 03 - Recursos dentro da VPC e EC2 avançado"
-date: 2020-04-27T16:08:38-03:00
+date: 2020-07-01T14:08:38-03:00
 draft: false
 ---
 
