@@ -196,7 +196,7 @@ Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos próximos
 Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
 
 Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
-Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
+
 
 ## Referências
 
