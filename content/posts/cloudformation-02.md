@@ -151,14 +151,20 @@ Outputs:
   VpcId:
       Description: ID of created VPC
       Value: !Ref myVPC
+      Export:
+        Name: VpcId
   
   PubsubnetId:
       Description: ID of public subnet
       Value: !Ref Pubsubnet
+      Export:
+        Name: PubsubnetId
   
   PrivsubnetId:
       Description: ID of private subnet
       Value: !Ref Privsubnet
+      Export:
+        Name: PrivsubnetId
 ```
 
 ## Rodando a stack
@@ -190,7 +196,7 @@ Neste artigo criamos uma VPC completa utilizando o Cloudformation. Nos próximos
 Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
 
 Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
-Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
+
 
 ## Referências
 

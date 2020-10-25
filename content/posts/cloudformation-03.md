@@ -1,18 +1,18 @@
 ---
 title: "Cloudformation 03 - Recursos dentro da VPC e EC2 avançado"
-date: 2020-04-27T16:08:38-03:00
-draft: true
+date: 2020-07-01T14:08:38-03:00
+draft: false
 ---
 
 ## Criando recursos dentro da VPC
 
-Em nosso [artigo passado](https://fabio.monster/posts/cloudformation-02/) criamos nossa VPC completa, portanto antes de iniciar a criação dos recursos citados aqui, precisamos rodar aquela stack para criar toda a estrutura da VPC.
+Em nosso [artigo passado](https://fabio.monster/posts/cloudformation-02/) criamos nossa VPC completa. Portanto antes de iniciar a criação dos recursos citados aqui, precisamos rodar aquela stack para criar toda a estrutura da VPC.
 
 Você pode encontrar o template cloudformation completo no meu [github](https://github.com/fabiolrodriguez/cloudformation-playground/tree/master/vpc).
 
 ## Criando a EC2
 
-Para criar nossa EC2, não tem segredo:
+Vamos criar uma instância EC2 dentro da nossa VPC previamente criada, usando o seguinte template:
 
 ```yaml
 
@@ -41,6 +41,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22 and 80
+      VpcId: !ImportValue 'VpcId'
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 22
@@ -52,13 +53,13 @@ Resources:
         CidrIp: "0.0.0.0/0"
 ```
 
-Note que estamos referênciando a nossa VPC e a subnet pública.
+Note que estamos referênciando a nossa VPC na criação do Security group e a subnet pública na instância EC2.
 
 ## Atribuindo um Elastic IP
 
 Sempre que reiniciamos uma instância EC2, o IP público padrão dela muda, pois é atribuído dinâmicamente.
 
-Para contornar esta situação e criar registros DNS confiáveis, precisamos atribuir um Elastic IP para a nossa instância.
+Para resolver esta situação e criar registros DNS confiáveis, precisamos atribuir um Elastic IP para a nossa instância.
 
 ```yaml
 
@@ -69,6 +70,7 @@ Para contornar esta situação e criar registros DNS confiáveis, precisamos atr
         Domain: !GetAtt 'myVPC'
 
 ```
+Novamente utilizamos nossa referência a VPC e a instância EC2 criada no exemplo anterior.
 
 ## Utilizando o userdata
 
@@ -96,12 +98,31 @@ Outputs:
   PublicIP:
     Description: Public IP address of the newly created EC2 instance
     Value: !GetAtt [EC2Instance, PublicIp]
+    Export:
+        Name: PublicIP
 ```
 
+## Rodando a stack
 
+Agora basta rodar o nosso template via awscli:
+
+```bash
+➜  ec2adv (master) ✗ aws cloudformation deploy --stack-name ec2adv --template-file ec2.yaml
+
+Waiting for changeset to be created..
+Waiting for stack create/update to complete
+Successfully created/updated stack - ec2adv
+```
+
+## Conclusão
+
+Neste artigo aprendemos como criar recursos dentro da nossa VPC de maneira automatizada, bem como rodar comandos em nossa EC2 durante a criação.
+
+Não se esqueçam de destruir os recursos para não serem cobrados até o próximo passo do tutorial.
+
+Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
 
 ## Referências
 
-[]()
+[https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/user-data.html](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/user-data.html)
 
-[]()
