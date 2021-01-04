@@ -1,7 +1,7 @@
 ---
 title: "Cloudformation 04 - Nested stacks"
 date: 2020-10-25T15:25:38-03:00
-draft: true
+draft: false
 ---
 
 ## Executando diversas stacks
@@ -10,7 +10,7 @@ Depois de algum tempo volto aqui para conversarmos mais um pouco sobre Cloudform
 
 Nos artigos anteriores criamos juntos recursos básicos como a nossa VPC e uma instância EC2 dentro desta VPC.
 
-Agora iremos aprimorar estes estudos, criando VPC, EC2, RDS e instalar um Wordpress nesta estrutura, tudo com apenas um comando.
+Agora iremos aprimorar estes scripts, criando VPC, EC2, RDS e instalar um Wordpress nesta estrutura, tudo com apenas um comando.
 
 ## Criando a nossa VPC
 
@@ -148,7 +148,7 @@ Outputs:
 
 Existem algumas maneiras de criar uma instância de banco de dados dentro da AWS, podendo ser inclusive uma instalação manual dentro de uma instância EC2.
 
-Neste exemplo, vamos usar um banco de dados gerenciado, criando uma instância RDS gratuita:
+Neste exemplo, vamos usar um banco de dados gerenciado, criando uma instância RDS free tier:
 
 ```yaml
 AWSTemplateFormatVersion: 2010-09-09
@@ -338,9 +338,7 @@ Poderíamos executar cada uma destas stacks individualmente, desde que a criaç�
 
 Mas existe uma maneira melhor e mais automatizada para isto, que são as **nested stacks**.
 
-Basicamente, criamos um template do CloudFormation que irá chamar os demais templates.
-
-Neste caso, precisamos subir os templates individuais para um bucket S3.
+Basicamente, criamos um template do CloudFormation que irá chamar os demais templates. Neste caso, precisamos subir os templates individuais para um bucket S3.
 
 Depois, referenciamos a URL de cada template no campo **TemplateURL**.
 
@@ -381,9 +379,23 @@ Executamos a stack:
 ```
 ## Acessando a aplicação
 
-Acessamos os outputs do CloudFormation e 
+Pelo console da AWS, acessamos os exports do CloudFormation.
 
-Agora basta abrir o navegador e colar este IP na barra de endereços para finalizar a configuração do seu Wordpress.
+Primeiro, precisamos do IP externo.
+
+![https/://fabio.monster](https://fabio.monster/images/exports.png)
+
+Agora basta abrir o navegador e colar este IP na barra de endereços para executar a configuração do seu Wordpress.
+
+Ainda nos exports, copiar o endpoint do banco de dados:
+
+![https/://fabio.monster](https://fabio.monster/images/dbendpoint.png)
+
+Preencher as configurações utilizando os dados do nosso RDS:
+
+![https/://fabio.monster](https://fabio.monster/images/wp-config.png)
+
+## Conclusão
 
 Existem diversas melhorias possíveis, como adicionar um nome DNS para o nosso site e retirar a senha do banco de dados do template, armazenando de maneira segura este dado. Mas este é conteúdo para um próximo post.
 
@@ -393,8 +405,10 @@ Não se esqueçam de apagar tudo depois dos testes:
 ➜  wp (master) ✗ aws cloudformation delete-stack --stack-name wp
 ```
 
+Todos os arquivos completos ficam no meu [Github](https://github.com/fabiolrodriguez/cloudformation-playground).
+
 ## Referências
 
-[]()
+[https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/user-data.html](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/user-data.html)
 
-[]()
+[https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html](https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)
