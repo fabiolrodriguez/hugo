@@ -399,7 +399,9 @@ Preencher as configurações utilizando os dados do nosso RDS:
 
 ## Conclusão
 
-Existem diversas melhorias possíveis, como adicionar um nome DNS para o nosso site e retirar a senha do banco de dados do template, armazenando de maneira segura este dado. Mas este é conteúdo para um próximo post.
+Existem diversas melhorias possíveis, como adicionar um nome DNS para o nosso site e retirar a senha do banco de dados do template, armazenando de maneira segura este dado. 
+
+Mas este é conteúdo para um próximo post.
 
 Não se esqueçam de apagar tudo depois dos testes:
 
