@@ -16,7 +16,7 @@ Agora iremos aprimorar estes scripts, criando VPC, EC2, RDS e instalar um Wordpr
 
 Como já citado anteriormente, a VPC é a nossa rede privada dentro da AWS, e é a base da nossa infra.
 
-Todos os exemplos estão no github ao final do artigo, mas mostrarei os códigos fonte aqui a demostração mais detalhada.
+Todos os exemplos estão no github ao final do artigo, mas mostrarei os códigos fonte aqui para deixar a demostração mais detalhada.
 
 ```yaml
 AWSTemplateFormatVersion: 2010-09-09
