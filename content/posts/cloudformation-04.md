@@ -387,13 +387,15 @@ Primeiro, precisamos do IP externo.
 
 Agora basta abrir o navegador e colar este IP na barra de endereços para executar a configuração do seu Wordpress.
 
+![https/://fabio.monster](https://fabio.monster/images/wp-config.png)
+
 Ainda nos exports, copiar o endpoint do banco de dados:
 
 ![https/://fabio.monster](https://fabio.monster/images/dbendpoint.png)
 
 Preencher as configurações utilizando os dados do nosso RDS:
 
-![https/://fabio.monster](https://fabio.monster/images/wp-config.png)
+![https/://fabio.monster](https://fabio.monster/images/wp-configured.png)
 
 ## Conclusão
 
